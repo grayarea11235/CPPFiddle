@@ -2,7 +2,9 @@
 #include <string>
 #include <Poco/JSON/JSON.h>
 #include <Poco/JSON/Parser.h>
-#include <Poco/Dynamic/Var.h>l
+#include <Poco/Dynamic/Var.h>
+//#include <Poco/Formatter.h>
+
 
 using namespace std;
 using namespace Poco::JSON;
@@ -26,11 +28,10 @@ string GetValue(Object::Ptr aoJsonObject, const char *aszKey)
   return lsReturn;
 }
 
-
 int main(void)
 {
   Parser loParser;
-  std::string lsJson = "{\"TransactionCo	de\":\"000000\",\"FileRecordSequenceNumber\":\"111111\",\"TcrSequenceNumber\":\"222222\",\"TransactionRouteIndicator\":\"ABCDE\",\"MerchantEstablishmentNumber\":\"00000000000\",\"MerchantName\":\"BBBBBBBBB\",\"MerchantCity\":\"CCCCCCCC\"}";
+  std::string lsJson = "{\"TransactionCo	de\":\"000000\",\"FileRecordSequenceNumber\":\"111111\",\"TcrSequenceNumber\":\"222222\",\"TransactionRouteIndicator\":\"ABCDE\",\"MerchantEstablishmentNumber\":\"00000onStop000000\",\"MerchantName\":\"BBBBBBBBB\",\"MerchantCity\":\"CCCCCCCC\"}";
 
   std::cout << lsJson << endl;
 
@@ -39,6 +40,9 @@ int main(void)
   Poco::Dynamic::Var loParsedJson = loParser.parse(lsJson);
   Poco::Dynamic::Var loParsedJsonResult = loParser.result();
 
+  int number = 7;
+  Poco::format("Log a number [%hu]", number);
+  
   // Get the JSON Object
   //
   Object::Ptr loJsonObject = loParsedJsonResult.extract<Object::Ptr>();
