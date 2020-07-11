@@ -5,7 +5,6 @@
 #include <Poco/Dynamic/Var.h>
 //#include <Poco/Formatter.h>
 
-
 using namespace std;
 using namespace Poco::JSON;
 
