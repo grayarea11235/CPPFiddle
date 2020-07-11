@@ -1,2 +1,3 @@
 *.o
 *.cpp~
+output.json
