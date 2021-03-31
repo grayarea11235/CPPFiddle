@@ -3,6 +3,7 @@
 #define Uses_TApplication
 #define Uses_TMenuBar
 #define Uses_TSubMenu
+#define Uses_TRect
 #define Uses_TKeys
 
 #include <tvision/tv.h>
