@@ -18,7 +18,6 @@ public:
   static TMenuBar *initMenuBar(TRect);
 };
 
-
 TMenuBar *TMyApp::initMenuBar(TRect r)
 {
   TSubMenu& sub1 = *new TSubMenu( "~F~ile", kbAltF ) + 
