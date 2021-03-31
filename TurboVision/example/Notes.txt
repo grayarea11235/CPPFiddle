@@ -1,0 +1,5 @@
+To Make ex1.cpp
+
+gcc ./ex1.cpp -I ./include/ -ltvision -lstdc++ -Wl,-Bsymbolic-functions -lncurses -ltinfo -o ex1
+
+
