@@ -19,4 +19,3 @@ ex1.o: ex1.cpp
 
 ex2.o: ex2.cpp
 	$(CPP) -c ex2.cpp
-

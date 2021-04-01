@@ -33,24 +33,12 @@ TMyApp::TMyApp(int argc, char *argv[]) :
                TMyApp::initDeskTop
     ), TApplication()
 {
-    TCommandSet ts;
-    ts.enableCmd( cmSave );
-    ts.enableCmd( cmSaveAs );
-    ts.enableCmd( cmCut );
-    ts.enableCmd( cmCopy );
-    ts.enableCmd( cmPaste );
-    ts.enableCmd( cmClear );
-    ts.enableCmd( cmUndo );
-//    ts.enableCmd( cmFind );
-//    ts.enableCmd( cmReplace );
-//    ts.enableCmd( cmSearchAgain );
-    disableCommands( ts );
 
 }
 
 int main(int argc, char *argv[])
 {
-  TMyApp myApp(argc, argv);
+  MyApp myApp(argc, argv);
 
   myApp.run();
   myApp.shutDown();
