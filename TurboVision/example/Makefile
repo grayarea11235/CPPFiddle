@@ -1,9 +1,9 @@
 # gcc ./ex1.cpp -I ./include/ -ltvision -lstdc++ -Wl,-Bsymbolic-functions -lncurses -ltinfo -o ex1
 #
 NCURSES_LIBS=`pkg-config --libs ncurses`
-LIBS=$(NCURSES_LIBS) -ltvision -lstdc++
+LIBS=$(NCURSES_LIBS) -ltvision 
 
-CPP=gcc
+CPP=g++ -std=c++11
 
 all: ex1.o ex2.o
 	$(CPP) ex1.o $(LIBS) -Wl,-Bsymbolic-functions -lncurses -ltinfo -o ex1
