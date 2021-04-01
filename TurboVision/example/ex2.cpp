@@ -38,7 +38,7 @@ TMyApp::TMyApp(int argc, char *argv[]) :
 
 int main(int argc, char *argv[])
 {
-  MyApp myApp(argc, argv);
+  TMyApp myApp(argc, argv);
 
   myApp.run();
   myApp.shutDown();
