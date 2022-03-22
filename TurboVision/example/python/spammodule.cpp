@@ -1,6 +1,15 @@
 #define PY_SSIZE_T_CLEAN
 #include <Python.h>
 
+static PyObject *spam_mytest(PyObject *self, PyObject *args)
+{
+  int sts;
+
+  sts = system("echo Chickens!");
+
+  return PyLong_FromLong(sts);
+}
+
 static PyObject *spam_system(PyObject *self, PyObject *args)
 {
     const char *command;
@@ -15,8 +24,21 @@ static PyObject *spam_system(PyObject *self, PyObject *args)
 
 // module methods
 static PyMethodDef SpamModuleMethods[] = {
-    { "system", spam_system, METH_VARARGS, "Execute system's command line from input string." }
+    { 
+      "system", 
+      spam_system, 
+      METH_VARARGS, 
+      "Execute system's command line from input string." 
+    },
+    {
+      "mytest",
+      spam_mytest,
+      METH_VARARGS,
+      "My test function"
+    }
 };
+
+
 // module definition
 static PyModuleDef SpamModuleDef = {
     PyModuleDef_HEAD_INIT,
