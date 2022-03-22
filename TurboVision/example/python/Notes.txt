@@ -1,0 +1,11 @@
+https://gist.github.com/haxpor/4ee82482e0d9d36818d2d98ef4fe736e
+
+
+How to build
+
+    python3 setup.py build
+    From current directory, cd build/lib.linux-x86_64-3.6 (tested on Ubuntu 18.04 with python 3.6.7).
+    python3 to enter interactive mode
+    import spam
+    spam.system('ls -la') then it should print the current directory listing as output
+
