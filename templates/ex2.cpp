@@ -2,7 +2,7 @@
 
 using namespace std;
 
-template <calls T>
+template <class T>
 
 
 
